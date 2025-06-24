@@ -4,7 +4,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Available-Courses</title>
     <style>
         body {
             background-color: #f8f9fa;
@@ -18,20 +18,22 @@
     </style>
 </head>
 <body>
-    <div class=" d-flex flex-column justify-content-center" style="height: 100vh;">
+    <div class=" d-flex flex-column justify-content-start mt-5" style="height: 100vh; width: 100vw;">
+        <div class="w-100">
         <h1 class="text-center text-danger">Available Courses</h1>
-    <table align="center" border="1" cellpadding="10" cellspacing="0" class="table table-striped w-75">
-        <tr class="fs-3 border-3 border-danger">
-            <th class=" border-3 border-danger text-success p-3 fs-3">Course Id</th>
-            <th class=" border-3 border-danger text-success p-3 fs-3">Course Name</th>
-            <th class=" border-3 border-danger text-success p-3 fs-3">Trainer</th>
-            <th class=" border-3 border-danger text-success p-3 fs-3">Duration in weeks</th>
-        </tr>
+        <table align="center" border="1" cellpadding="10" cellspacing="0" class="table table-striped w-50 w-md-75 m-auto">
+            <tr class="fs-md-3 border-3 border-danger">
+                <th class=" border-3 border-danger text-success p-md-3 fs-md-3">Course Id</th>
+                <th class=" border-3 border-danger text-success p-md-3 fs-md-3">Course Name</th>
+                <th class=" border-3 border-danger text-success p-md-3 fs-md-3">Trainer</th>
+                <th class=" border-3 border-danger text-success p-md-3 fs-md-3">Duration in weeks</th>
+            </tr>
 
-        <tbody class="fs-3 border-3 border-danger" id="courseTable" align="center"></tbody>
+            <tbody class="fs-md-3 border-3 border-danger" id="courseTable" align="center"></tbody>
 
-    </table>
-</div>
+        </table>
+    </div>
+    </div>
 
     <script type="text/javascript">
         window.onload = function() {
@@ -41,10 +43,10 @@
                     const courseTable = document.getElementById('courseTable');
                     courses.forEach(course => {
                         var row = `<tr>
-                            <td class=" border-3 border-danger text-primary fs-3 p-3">${course.courseId}</td>
-                            <td class=" border-3 border-danger text-primary fs-3 p-3">${course.courseName}</td>
-                            <td class=" border-3 border-danger text-primary fs-3 p-3">${course.trainer}</td>
-                            <td class=" border-3 border-danger text-primary fs-3 p-3">${course.durationInWeeks}</td>
+                            <td class=" border-3 border-danger text-primary fs-md-3 p-md-3">${course.courseId}</td>
+                            <td class=" border-3 border-danger text-primary fs-md-3 p-md-3">${course.courseName}</td>
+                            <td class=" border-3 border-danger text-primary fs-md-3 p-md-3">${course.trainer}</td>
+                            <td class=" border-3 border-danger text-primary fs-md-3 p-md-3">${course.durationInWeeks}</td>
                         </tr>`
                         courseTable.innerHTML+=row;
                     });
